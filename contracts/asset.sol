@@ -24,6 +24,7 @@ contract Asset is Initializable, OwnableUpgradeable, ReentrancyGuardUpgradeable 
     mapping(address => uint256) public lossBalance; // user loss asset
     mapping(address => uint256[]) internal depositRecords;
     mapping(address => bool) public canWithdraw; // Whether the user can withdraw cash
+    uint256 public constant MAX_SIZE = 1000;
 
     event Deposit(address indexed user, uint256 amount);
     event CanWithdraw(address indexed user);
@@ -63,6 +64,7 @@ contract Asset is Initializable, OwnableUpgradeable, ReentrancyGuardUpgradeable 
         uint256 cursor,
         uint256 size
     ) external view returns (uint256[] memory m, uint256) {
+        require(size <= MAX_SIZE, "Exceed Size Limit");
         uint256 length = size;
         if (length > depositRecords[addr].length - cursor) {
             length = depositRecords[addr].length - cursor;
