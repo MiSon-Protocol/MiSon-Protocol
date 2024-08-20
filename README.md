@@ -1,7 +1,7 @@
 # MiSon Protocol
 MiSon Protocol is a decentralized digital asset intelligent aggregation service protocol running on public blockchains such as Ethereum, Binance Chain, and Solana. 
 
-It maximizes the use of existing third-party applications in the underlying DeFi field. 
+It maximizes the use of existing third-party applications in the underlying DeFi field.  
 
 Through its unique "AI Intelligent Strategy Core Component," it intelligently allocates funds among applications such as DEX trading arbitrage, lending contracts, and liquidity provisioning.
 
